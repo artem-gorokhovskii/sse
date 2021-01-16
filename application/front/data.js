@@ -8,6 +8,7 @@ document
         eventSource = new EventSource('http://localhost:8080/sse');
 
         eventSource.addEventListener('regular', (ev) => {
+            console.log(ev);
             console.log('Received data: ', ev.data);
             addOnePoint(Number(ev.data));
         });
